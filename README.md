@@ -16,6 +16,17 @@ Aplikasi ini menggunakan JavaFX sebagai teknologi antarmuka grafis dan Maven seb
 - Antarmuka grafis yang interaktif dan mudah digunakan.
 - Pengelolaan data menggunakan konsep Object-Oriented Programming (OOP).
 
+## 🖥️ Tampilan Aplikasi
+
+### Form (Menu Awal)
+![Form](Screenshot/Form.png)
+
+### Daftar Menu
+![Daftar](Screenshot/Daftar.png)
+
+### Detaim Menu
+![Detail](Screenshot/Detail.png)
+
 ## 🛠️ Teknologi yang Digunakan
 
 - **Java** – Bahasa pemrograman utama.
