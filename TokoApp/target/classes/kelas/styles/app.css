@@ -38,12 +38,12 @@
     -fx-cursor: hand;
 }
 .button-primary {
-    -fx-background-color: #2563eb;
+    -fx-background-color: #228b22;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 .button-primary:hover {
-    -fx-background-color: #1d4ed8;
+    -fx-background-color: #006400;
 }
 .text-field, .combo-box {
     -fx-background-radius: 7;

@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelas.controller.DetailController" stylesheets="@styles/app.css">
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="462.0" prefWidth="495.0" stylesheets="@styles/app.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelas.controller.DetailController">
     <top>
-        <HBox styleClass="header" spacing="16">
-            <Label text="Detail Produk" styleClass="title"/>
-            <Button text="Lihat Daftar" onAction="#bukaDaftar"/>
+        <HBox prefHeight="76.0" prefWidth="678.0" spacing="16" styleClass="header">
+            <Label styleClass="title" text="Detail Produk" />
+            <Button onAction="#bukaDaftar" text="Lihat Daftar Menu" />
         </HBox>
     </top>
     <center>
         <ScrollPane fitToWidth="true">
             <content>
-                <VBox styleClass="page" spacing="16">
-                    <VBox styleClass="card" spacing="10">
-                        <Label text="Kode" styleClass="muted"/>
-                        <Label fx:id="kodeLabel" styleClass="subtitle"/>
-                        <Label text="Nama produk" styleClass="muted"/>
-                        <Label fx:id="namaLabel" wrapText="true"/>
-                        <Label text="Kategori" styleClass="muted"/>
-                        <Label fx:id="kategoriLabel"/>
-                        <Label text="Harga" styleClass="muted"/>
-                        <Label fx:id="hargaLabel" styleClass="title"/>
-                        <Label fx:id="pesanLabel" wrapText="true" styleClass="error"/>
-                        <Button text="Tambah Produk Lain" onAction="#tambahLagi" styleClass="button-primary"/>
+                <VBox prefHeight="383.0" prefWidth="707.0" spacing="16" styleClass="page">
+                    <VBox spacing="10" styleClass="card">
+                        <Label styleClass="muted" text="Kode" />
+                        <Label fx:id="kodeLabel" styleClass="subtitle" />
+                        <Label styleClass="muted" text="Nama Menu" />
+                        <Label fx:id="namaLabel" wrapText="true" />
+                        <Label styleClass="muted" text="Kategori" />
+                        <Label fx:id="kategoriLabel" />
+                        <Label styleClass="muted" text="Harga" />
+                        <Label fx:id="hargaLabel" styleClass="title" />
+                        <Label fx:id="pesanLabel" styleClass="error" wrapText="true" />
+                        <Button onAction="#tambahLagi" styleClass="button-primary" text="Tambah Menu Lain" />
                     </VBox>
                 </VBox>
             </content>

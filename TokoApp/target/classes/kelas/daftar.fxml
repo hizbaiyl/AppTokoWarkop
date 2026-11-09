@@ -1,35 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<BorderPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="kelas.controller.DaftarController"
-            stylesheets="@styles/app.css">
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@styles/app.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelas.controller.DaftarController">
     <top>
         <VBox spacing="12" styleClass="header">
-            <Label text="Daftar Produk Toko" styleClass="title"/>
-            <TextField fx:id="cariField" promptText="Cari nama produk"
-                       onAction="#cari"/>
-            <FlowPane hgap="10" vgap="8">
-                <Button text="Cari" onAction="#cari"/>
-                <Button text="Reset" onAction="#resetPencarian"/>
-                <Button text="Tambah" onAction="#tambah"
-                        styleClass="button-primary"/>
-                <Button text="Lihat Detail" onAction="#detail"/>
-            </FlowPane>
+            <Label styleClass="title" text="Daftar Menu Warkop" />
+            <TextField fx:id="cariField" onAction="#cari" promptText="Cari nama menu" />
+         <Pane prefHeight="42.0" prefWidth="636.0">
+            <children>
+                   <Button layoutY="5.0" onAction="#cari" text="Cari" />
+                   <Button layoutX="66.0" layoutY="5.0" onAction="#resetPencarian" text="Reset" />
+                   <Button layoutX="142.0" layoutY="5.0" onAction="#detail" text="Lihat Detail" />
+                   <Button layoutX="509.0" layoutY="3.0" onAction="#tambah" styleClass="button-primary" text="Tambah Menu" textFill="WHITE" />
+            </children>
+         </Pane>
         </VBox>
     </top>
     <center>
         <TableView fx:id="tabel">
             <columns>
-                <TableColumn fx:id="kodeCol" text="Kode" prefWidth="100"/>
-                <TableColumn fx:id="namaCol" text="Nama Produk" prefWidth="280"/>
-                <TableColumn fx:id="kategoriCol" text="Kategori" prefWidth="150"/>
-                <TableColumn fx:id="hargaCol" text="Harga (Rp)" prefWidth="150"/>
+                <TableColumn fx:id="kodeCol" prefWidth="100" text="Kode" />
+                <TableColumn fx:id="namaCol" prefWidth="280" text="Nama Menu" />
+                <TableColumn fx:id="kategoriCol" prefWidth="150" text="Jenis" />
+                <TableColumn fx:id="hargaCol" prefWidth="150" text="Harga (Rp)" />
             </columns>
         </TableView>
     </center>
     <bottom>
-        <Label fx:id="pesanLabel" wrapText="true" styleClass="error"/>
+        <Label fx:id="pesanLabel" styleClass="error" wrapText="true" />
     </bottom>
 </BorderPane>
